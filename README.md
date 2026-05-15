@@ -131,3 +131,14 @@ filteredDF = groupedDF.filter(
    ```python
    transaction_path = "/Volumes/your_catalog/your_schema/your_volume/Transaction_Updated.csv"
    customer_table = "your_catalog.your_schema.customer_delta_table"
+
+3. ** Run the desired workflow in apple_analysis.py:
+   ```python
+   WorkFlowRunner("onlyAripodsAfterIphoneWorkFlow").runner()
+   
+## Running the Pipeline
+   # Run specific workflow
+   ```python
+    WorkFlowRunner("aripodsAfterIphoneWorkFlow").runner()      # AirPods after iPhone
+    WorkFlowRunner("onlyAripodsAfterIphoneWorkFlow").runner() # Only AirPods and iPhone
+    WorkFlowRunner("bothAripodsAfterIphoneWorkFlow").runner() # Both products
