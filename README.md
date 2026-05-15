@@ -15,3 +15,28 @@ The pipeline identifies three distinct customer segments:
 | **AirPods After iPhone** | Customers who bought AirPods immediately after purchasing an iPhone | Identify cross-sell opportunities |
 | **Only AirPods and iPhone** | Customers who exclusively bought only these two products | Target brand-loyal customers |
 | **Both Products** | Customers who bought both AirPods and iPhone (any order) | Product bundling strategies |
+
+## Technology Stack
+
+- **Apache Spark (PySpark)** - Distributed data processing engine
+- **Databricks** - Unified data analytics platform
+- **Delta Lake** - ACID transactions and time travel capabilities
+- **Unity Catalog** - Data governance and table management
+- **Python** - Core programming language
+
+## Project Structure
+
+apple-purchase-etl/
+│
+├── code/
+│ ├── reader_factory.py # Extract layer: Factory pattern for CSV/Parquet/Delta sources
+│ ├── extractor.py # Concrete extractor implementations
+│ ├── transform.py # Transform layer: Business logic transformers
+│ ├── loader_factory.py # Load layer: Factory pattern for data sinks
+│ ├── loader.py # Concrete loader implementations
+│ └── apple_analysis.py # Workflow orchestrator and runner
+│
+├── data/
+│ └── Transaction_Updated.csv # Sample transaction data
+│
+└── README.md # Project documentation
