@@ -139,6 +139,22 @@ filteredDF = groupedDF.filter(
 # Running the Pipeline
    ## Run specific workflow
    ```python
-    WorkFlowRunner("aripodsAfterIphoneWorkFlow").runner()      # AirPods after iPhone
-    WorkFlowRunner("onlyAripodsAfterIphoneWorkFlow").runner() # Only AirPods and iPhone
-    WorkFlowRunner("bothAripodsAfterIphoneWorkFlow").runner() # Both products
+   WorkFlowRunner("aripodsAfterIphoneWorkFlow").runner()      # AirPods after iPhone
+   WorkFlowRunner("onlyAripodsAfterIphoneWorkFlow").runner() # Only AirPods and iPhone
+   WorkFlowRunner("bothAripodsAfterIphoneWorkFlow").runner() # Both products
+```
+
+# What I Learned
+- **Factory patterns** make ETL pipelines extensible and maintainable
+- **Window functions** (LEAD/LAG) are powerful for sequence analysis without self-joins
+- **Broadcast joins** dramatically improve performance for small lookup tables
+- **Partitioning strategies** significantly impact query performance
+- **Medallion architecture** (Bronze/Silver/Gold) provides clear data lineage
+- **Abstract base classes** enforce consistent interfaces across implementations
+
+#  Future Enhancements
+- Add data quality validation layer
+- Implement incremental loading (append mode)
+- Add unit tests for transformers
+- Create Databricks SQL dashboard for visualization
+- Add monitoring and alerting
