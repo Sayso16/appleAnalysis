@@ -29,14 +29,14 @@ The pipeline identifies three distinct customer segments:
 apple-purchase-etl/
 │
 ├── code/
-│ ├── reader_factory.py # Extract layer: Factory pattern for CSV/Parquet/Delta sources
-│ ├── extractor.py # Concrete extractor implementations
-│ ├── transform.py # Transform layer: Business logic transformers
-│ ├── loader_factory.py # Load layer: Factory pattern for data sinks
-│ ├── loader.py # Concrete loader implementations
-│ └── apple_analysis.py # Workflow orchestrator and runner
+│   ├── reader_factory.py
+│   ├── extractor.py
+│   ├── transform.py
+│   ├── loader_factory.py
+│   ├── loader.py
+│   └── apple_analysis.py
 │
 ├── data/
-│ └── Transaction_Updated.csv # Sample transaction data
+│   └── Transaction_Updated.csv
 │
-└── README.md # Project documentation
+└── README.md
