@@ -104,3 +104,12 @@ filteredDF = groupedDF.filter(
     (size(col("products")) == 2)
 )
 ```
+
+## Performance Optimizations
+
+| Technique | Implementation | Benefit |
+|-----------|---------------|---------|
+| Broadcast Joins | `broadcast(filteredDF)` | Optimizes small DataFrame joins |
+| Partitioned Writes | `partitionBy("location")` | Faster location-based queries |
+| Window Functions | Single pass over data | Efficient sequential analysis |
+| Column Pruning | `select()` specific columns | Reduces data shuffle |
