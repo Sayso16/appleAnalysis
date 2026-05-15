@@ -93,3 +93,14 @@ transformDF = df.withColumn("next_product", lead("product_name").over(windowSpec
 filteredDF = transformDF.filter(
     (col("product_name") == 'iPhone') & (col("next_product") == 'AirPods')
 )
+```
+
+**Only AirPods and iPhone Transformer:**
+```python
+groupedDF = df.groupBy("customer_id").agg(collect_set("product_name").alias("products"))
+filteredDF = groupedDF.filter(
+    array_contains(col("products"), 'iPhone') &
+    array_contains(col("products"), 'AirPods') &
+    (size(col("products")) == 2)
+)
+```
