@@ -74,7 +74,7 @@ The pipeline follows a modular ETL design with three distinct layers:
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-```
+
 
 ## Key Technical Implementations
 
@@ -83,7 +83,7 @@ The pipeline follows a modular ETL design with three distinct layers:
 | AirPods After iPhone | Window functions with `LEAD()` for sequential purchase analysis |
 | Only AirPods and iPhone | `collect_set()` aggregation with `array_contains()` and `size()` filtering |
 | Both Products | Combined filter with `OR` logic on `LEAD()` results |
-```
+
 ### Code Examples
 
 **AirPods After iPhone Transformer:**
