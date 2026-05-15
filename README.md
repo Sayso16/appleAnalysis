@@ -49,7 +49,7 @@ apple-purchase-etl/
 ## ETL Architecture
 
 The pipeline follows a modular ETL design with three distinct layers:
-
+```
 ┌─────────────────────────────────────────────────────────────────┐
 │ EXTRACT LAYER │
 │ • Reader Factory Pattern │
@@ -72,3 +72,4 @@ The pipeline follows a modular ETL design with three distinct layers:
 │ • Supports: DBFS write, Partitioned writes │
 │ • Overwrite/Append modes │
 └─────────────────────────────────────────────────────────────────┘
+```
