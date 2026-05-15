@@ -158,3 +158,7 @@ filteredDF = groupedDF.filter(
 - Add unit tests for transformers
 - Create Databricks SQL dashboard for visualization
 - Add monitoring and alerting
+
+
+# Contributing
+This project is for educational purposes. Feel free to fork and modify for your own learning
