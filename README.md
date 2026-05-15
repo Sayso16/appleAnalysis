@@ -113,3 +113,21 @@ filteredDF = groupedDF.filter(
 | Partitioned Writes | `partitionBy("location")` | Faster location-based queries |
 | Window Functions | Single pass over data | Efficient sequential analysis |
 | Column Pruning | `select()` specific columns | Reduces data shuffle |
+
+
+<!--to put sample outputs -->>
+
+## 🚀 Setup Instructions
+
+### Prerequisites
+- Databricks workspace access
+- Cluster with Spark 3.x+
+- Unity Catalog enabled
+
+### Steps
+
+1. **Clone or upload** all code files to your Databricks workspace
+2. **Update file paths** in `extractor.py`:
+   ```python
+   transaction_path = "/Volumes/your_catalog/your_schema/your_volume/Transaction_Updated.csv"
+   customer_table = "your_catalog.your_schema.customer_delta_table"
