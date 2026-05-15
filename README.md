@@ -46,3 +46,29 @@ apple-purchase-etl/
 │
 └── README.md # Project documentation
 ```
+## ETL Architecture
+
+The pipeline follows a modular ETL design with three distinct layers:
+
+┌─────────────────────────────────────────────────────────────────┐
+│ EXTRACT LAYER │
+│ • Reader Factory Pattern │
+│ • Supports: CSV, Parquet, Delta Tables │
+│ • Broadcast joins for optimization │
+└─────────────────────────────┬───────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────┐
+│ TRANSFORM LAYER │
+│ • Window functions (LEAD/LAG for sequential analysis) │
+│ • Aggregations with collect_set │
+│ • Array operations for product set analysis │
+└─────────────────────────────┬───────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────┐
+│ LOAD LAYER │
+│ • Loader Factory Pattern │
+│ • Supports: DBFS write, Partitioned writes │
+│ • Overwrite/Append modes │
+└─────────────────────────────────────────────────────────────────┘
