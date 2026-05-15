@@ -1,6 +1,10 @@
 # appleAnalysis
 Apple Product Purchase Analysis - ETL Pipeline
 # Apple Product Purchase Analysis - ETL Pipeline
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![PySpark](https://img.shields.io/badge/PySpark-3.x-orange.svg)
+![Databricks](https://img.shields.io/badge/Databricks-Platform-red.svg)
+![Delta Lake](https://img.shields.io/badge/Delta%20Lake-2.x-green.svg)
 
 A production-grade ETL pipeline built with **Apache Spark (PySpark)** on **Databricks** that analyzes customer purchase patterns for Apple products (iPhone and AirPods).
 
