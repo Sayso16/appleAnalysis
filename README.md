@@ -73,3 +73,23 @@ The pipeline follows a modular ETL design with three distinct layers:
 │ • Overwrite/Append modes                                        │
 └─────────────────────────────────────────────────────────────────┘
 ```
+
+```
+
+## Key Technical Implementations
+
+| Analysis | PySpark Technique Used |
+|----------|----------------------|
+| AirPods After iPhone | Window functions with `LEAD()` for sequential purchase analysis |
+| Only AirPods and iPhone | `collect_set()` aggregation with `array_contains()` and `size()` filtering |
+| Both Products | Combined filter with `OR` logic on `LEAD()` results |
+```
+### Code Examples
+
+**AirPods After iPhone Transformer:**
+```python
+windowSpec = Window.partitionBy("customer_id").orderBy("transaction_date")
+transformDF = df.withColumn("next_product", lead("product_name").over(windowSpec))
+filteredDF = transformDF.filter(
+    (col("product_name") == 'iPhone') & (col("next_product") == 'AirPods')
+)
