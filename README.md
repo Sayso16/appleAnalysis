@@ -1,4 +1,4 @@
-# appleAnalysis
+<img width="857" height="367" alt="image" src="https://github.com/user-attachments/assets/5d321a70-bda7-4985-8430-c97b1866d6d8" /># appleAnalysis
 Apple Product Purchase Analysis - ETL Pipeline
 # Apple Product Purchase Analysis - ETL Pipeline
 
@@ -49,26 +49,27 @@ apple-purchase-etl/
 ## ETL Architecture
 
 The pipeline follows a modular ETL design with three distinct layers:
-
+```
 ┌─────────────────────────────────────────────────────────────────┐
-│ EXTRACT LAYER │
-│ • Reader Factory Pattern │
-│ • Supports: CSV, Parquet, Delta Tables │
-│ • Broadcast joins for optimization │
+│ EXTRACT LAYER                                                   │
+│ • Reader Factory Pattern                                        │
+│ • Supports: CSV, Parquet, Delta Tables                          │
+│ • Broadcast joins for optimization                              │
 └─────────────────────────────┬───────────────────────────────────┘
-│
-▼
+                              │
+                              ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│ TRANSFORM LAYER │
-│ • Window functions (LEAD/LAG for sequential analysis) │
-│ • Aggregations with collect_set │
-│ • Array operations for product set analysis │
+│ TRANSFORM LAYER                                                 │
+│ • Window functions (LEAD/LAG for sequential analysis)           │
+│ • Aggregations with collect_set                                 │
+│ • Array operations for product set analysis                     │
 └─────────────────────────────┬───────────────────────────────────┘
-│
-▼
+                              │
+                              ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│ LOAD LAYER │
-│ • Loader Factory Pattern │
-│ • Supports: DBFS write, Partitioned writes │
-│ • Overwrite/Append modes │
+│ LOAD LAYER                                                      │
+│ • Loader Factory Pattern                                        │
+│ • Supports: DBFS write, Partitioned writes                      │
+│ • Overwrite/Append modes                                        │
 └─────────────────────────────────────────────────────────────────┘
+```
