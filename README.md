@@ -26,7 +26,7 @@ The pipeline identifies three distinct customer segments:
 
 ## Project Structure
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 apple-purchase-etl/
@@ -117,7 +117,7 @@ filteredDF = groupedDF.filter(
 
 <!--to put sample outputs -->>
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 - Databricks workspace access
