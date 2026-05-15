@@ -1,4 +1,4 @@
-<img width="857" height="367" alt="image" src="https://github.com/user-attachments/assets/5d321a70-bda7-4985-8430-c97b1866d6d8" /># appleAnalysis
+# appleAnalysis
 Apple Product Purchase Analysis - ETL Pipeline
 # Apple Product Purchase Analysis - ETL Pipeline
 
